@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: pytest  # Run tests instead of starting the Flask app
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_URL=postgresql://flaskuser:flaskpassword@db:5432/flaskdb
+      - REDIS_URL=redis://redis:6379/0
+      - JWT_SECRET_KEY=test_secret_key
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: flaskdb
+      POSTGRES_USER: flaskuser
+      POSTGRES_PASSWORD: flaskpassword
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres-data:

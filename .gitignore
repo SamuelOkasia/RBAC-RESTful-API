@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment directory
+venv/
+.env
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Flask instance folder (contains your SQLite database, for example)
+instance/
+
+# Pytest cache and coverage files
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# Docker-related files
+*.log
+docker-compose.override.yml
+.docker/
+.dockerignore
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Ignore environment variables and config files
+*.env
+.env.local
+.env.test
+.env.production
+
+# Ignore database migrations if you're using Flask-Migrate
+migrations/
+
+# Ignore the entire frontend folder
+frontend/
+
+# Ignore the README.md file
+read.md
+
+# Ignore the Google client secret file
+client_secret_739645863867-nqg3il9l3b586ucgps3use97tqac14f1.apps.googleusercontent.com.json
