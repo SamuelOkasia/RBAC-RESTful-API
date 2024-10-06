@@ -136,4 +136,4 @@ If you'd like to contribute, please fork the repository and use a feature branch
     ```bash
     git checkout -b feature-branch
     ```
-2. Push your changes and submit a pull request.#
+2. Push your changes and submit a pull request.
